@@ -7,6 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 # from .email import send_welcome_email
 from django.contrib.auth import authenticate,login,logout
 # Create your views here.
+def indexPage(request):
+    return render(request,'index.html')
 
 def registerPage(request):
     if request.user.is_authenticated:
